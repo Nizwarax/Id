@@ -1,3 +1,69 @@
+
+/* Sponsor logo hover to red */
+.sponsor-logo{ transition: filter 0.3s ease, transform 0.2s ease, opacity 0.3s ease; }
+.sponsor-logo:hover{ filter: invert(21%) sepia(94%) saturate(7486%) hue-rotate(1deg) brightness(103%) contrast(106%); }
+.sponsor-logo:active{ transform: scale(1.12); }
+
+/* Custom styles for the new ID card */
+.signature-font {
+    font-family: 'Great Vibes', cursive;
+}
+
+#id-card {
+    background-image:
+        radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.1) 1px, transparent 0),
+        radial-gradient(circle at 10px 10px, rgba(14, 165, 233, 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+    box-shadow:
+        0 25px 50px -12px rgb(0 0 0 / 0.4),
+        0 0 0 1px rgba(6, 182, 212, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#id-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.05) 100%);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#id-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1F2937; /* bg-gray-800 */
+}
+::-webkit-scrollbar-thumb {
+    background: #4B5563; /* bg-gray-600 */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #6B7280; /* bg-gray-500 */
+}
+
 .id-card-container {
             width: 3.375in;
             height: 2.125in;
@@ -192,6 +258,3 @@
 .file-input-button:hover {
             background-color: #4338CA;
 }
-
-
-
